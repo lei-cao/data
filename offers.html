@@ -1,0 +1,848 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/32a13dc5a7.js" crossorigin="anonymous"></script>
+  <meta name="template" content="">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&amp;display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+html {
+box-sizing: border-box;
+height: 100%;
+width: 100%; }
+
+*, *:before, *:after {
+box-sizing: inherit; }
+
+.name:empty, button:empty, .description1:empty, .description2:empty, .description3:empty, .description4:empty, .sale:empty, .price:empty, .reducedPrice:empty {
+display: none; }
+
+body {
+height: 100%;
+width: 100%;
+margin: 0;
+overflow: hidden;
+background: #fff; }
+
+a {
+color: inherit;
+text-decoration: none;
+display: block;
+width: 100%;
+height: 100%; }
+
+@-webkit-keyframes overlay-slide {
+0% {
+  left: 100vw; }
+40% {
+  left: 100vw; }
+50% {
+  left: 0; }
+90% {
+  left: 0; }
+100% {
+  left: 100vw; } }
+
+@-moz-keyframes overlay-slide {
+0% {
+  left: 100vw; }
+40% {
+  left: 100vw; }
+50% {
+  left: 0; }
+90% {
+  left: 0; }
+100% {
+  left: 100vw; } }
+
+@keyframes overlay-slide {
+0% {
+  left: 100vw; }
+40% {
+  left: 100vw; }
+50% {
+  left: 0; }
+90% {
+  left: 0; }
+100% {
+  left: 100vw; } }
+
+@-webkit-keyframes flipInX {
+0% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-in;
+  opacity: 0; }
+50% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-out;
+  opacity: 0; }
+54% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  animation-timing-function: ease-in; }
+57% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+  animation-timing-function: ease-out;
+  opacity: 1; }
+59% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  animation-timing-function: ease-in; }
+60% {
+  transform: perspective(400px); }
+92% {
+  transform: perspective(400px); }
+96% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1; }
+100% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0; } }
+
+@-moz-keyframes flipInX {
+0% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-in;
+  opacity: 0; }
+50% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-out;
+  opacity: 0; }
+54% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  animation-timing-function: ease-in; }
+57% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+  animation-timing-function: ease-out;
+  opacity: 1; }
+59% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  animation-timing-function: ease-in; }
+60% {
+  transform: perspective(400px); }
+92% {
+  transform: perspective(400px); }
+96% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1; }
+100% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0; } }
+
+@keyframes flipInX {
+0% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-in;
+  opacity: 0; }
+50% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  animation-timing-function: ease-out;
+  opacity: 0; }
+54% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  animation-timing-function: ease-in; }
+57% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+  animation-timing-function: ease-out;
+  opacity: 1; }
+59% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  animation-timing-function: ease-in; }
+60% {
+  transform: perspective(400px); }
+92% {
+  transform: perspective(400px); }
+96% {
+  transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+  opacity: 1; }
+100% {
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0; } }
+
+@-webkit-keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@-webkit-keyframes pulse2 {
+0% {
+  box-shadow: 0 0 0 0 black; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(0, 0, 0, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+@-moz-keyframes pulse2 {
+0% {
+  box-shadow: 0 0 0 0 black; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(0, 0, 0, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+@keyframes pulse2 {
+0% {
+  box-shadow: 0 0 0 0 black; }
+70% {
+  box-shadow: 0 0 0 0.4em rgba(0, 0, 0, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); } }
+
+@-webkit-keyframes anim-slide-right {
+from {
+  opacity: 0;
+  transform: translateX(-10vw); }
+to {
+  opacity: 1; } }
+
+@-moz-keyframes anim-slide-right {
+from {
+  opacity: 0;
+  transform: translateX(-10vw); }
+to {
+  opacity: 1; } }
+
+@keyframes anim-slide-right {
+from {
+  opacity: 0;
+  transform: translateX(-10vw); }
+to {
+  opacity: 1; } }
+
+@-webkit-keyframes shine {
+0% {
+  background-position: right; } }
+
+@-moz-keyframes shine {
+0% {
+  background-position: right; } }
+
+@keyframes shine {
+0% {
+  background-position: right; } }
+
+@font-face {
+font-family: 'merge_probold';
+src: url("https://assets.remerge.io/dpa/Mytona/cd-font-en-webfont.woff2") format("woff2"), url("https://assets.remerge.io/dpa/Mytona/cd-font-en-webfont.woff") format("woff");
+font-weight: normal;
+font-style: normal; }
+
+@-webkit-keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@-moz-keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@keyframes pulse {
+0% {
+  box-shadow: 0 0 0 0 white; }
+70% {
+  box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0); }
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+
+@-webkit-keyframes shake {
+0%, 50%, 100% {
+  transform: rotate(0deg);
+  transform-origin: 50% 100%; }
+5% {
+  transform: rotate(1deg); }
+10%, 20%, 30% {
+  transform: rotate(-2deg); }
+15%, 25%, 35% {
+  transform: rotate(2deg); }
+40% {
+  transform: rotate(-1deg); }
+45% {
+  transform: rotate(1deg); } }
+
+@-moz-keyframes shake {
+0%, 50%, 100% {
+  transform: rotate(0deg);
+  transform-origin: 50% 100%; }
+5% {
+  transform: rotate(1deg); }
+10%, 20%, 30% {
+  transform: rotate(-2deg); }
+15%, 25%, 35% {
+  transform: rotate(2deg); }
+40% {
+  transform: rotate(-1deg); }
+45% {
+  transform: rotate(1deg); } }
+
+@keyframes shake {
+0%, 50%, 100% {
+  transform: rotate(0deg);
+  transform-origin: 50% 100%; }
+5% {
+  transform: rotate(1deg); }
+10%, 20%, 30% {
+  transform: rotate(-2deg); }
+15%, 25%, 35% {
+  transform: rotate(2deg); }
+40% {
+  transform: rotate(-1deg); }
+45% {
+  transform: rotate(1deg); } }
+
+@-webkit-keyframes kenburns {
+0% {
+  transform: scale(1) translateY(0);
+  transform-origin: 50% 16%; }
+100% {
+  transform: scale(1.25) translateY(-15px);
+  transform-origin: top; } }
+
+@-moz-keyframes kenburns {
+0% {
+  transform: scale(1) translateY(0);
+  transform-origin: 50% 16%; }
+100% {
+  transform: scale(1.25) translateY(-15px);
+  transform-origin: top; } }
+
+@keyframes kenburns {
+0% {
+  transform: scale(1) translateY(0);
+  transform-origin: 50% 16%; }
+100% {
+  transform: scale(1.25) translateY(-15px);
+  transform-origin: top; } }
+
+@-webkit-keyframes text1 {
+0% {
+  opacity: 1; }
+50% {
+  opacity: 1; }
+51% {
+  opacity: 0; }
+100% {
+  opacity: 0; } }
+
+@-moz-keyframes text1 {
+0% {
+  opacity: 1; }
+50% {
+  opacity: 1; }
+51% {
+  opacity: 0; }
+100% {
+  opacity: 0; } }
+
+@keyframes text1 {
+0% {
+  opacity: 1; }
+50% {
+  opacity: 1; }
+51% {
+  opacity: 0; }
+100% {
+  opacity: 0; } }
+
+@-webkit-keyframes text2 {
+0% {
+  opacity: 0; }
+50% {
+  opacity: 0; }
+51% {
+  opacity: 1; }
+100% {
+  opacity: 1; } }
+
+@-moz-keyframes text2 {
+0% {
+  opacity: 0; }
+50% {
+  opacity: 0; }
+51% {
+  opacity: 1; }
+100% {
+  opacity: 1; } }
+
+@keyframes text2 {
+0% {
+  opacity: 0; }
+50% {
+  opacity: 0; }
+51% {
+  opacity: 1; }
+100% {
+  opacity: 1; } }
+
+body {
+letter-spacing: .05em; }
+
+.bg {
+z-index: 0;
+background: url("https://assets.remerge.io/dpa/Mytona/bg.jpg");
+background-size: cover;
+background-position: center;
+width: 120%;
+height: 120%;
+position: absolute;
+animation: kenburns 10s ease-out both; }
+
+.logo {
+z-index: 1;
+background: url("https://assets.remerge.io/dpa/Mytona/CD-logo-min-en.png") no-repeat;
+background-size: contain;
+width: 40vw;
+height: 13vh;
+position: absolute;
+top: 2vh;
+left: 50%;
+transform: translateX(-50%);
+background-position: center center; }
+
+.flex-wrapper {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 17vh;
+width: 100vw; }
+
+.headline {
+z-index: 5;
+width: 100%; }
+.headline p {
+  font-family: 'Luckiest Guy', sans-serif;
+  color: white;
+  text-shadow: -1px -1px 0 #B7584B,        1px -1px 0 #B7584B,      -1px 1px 0 #B7584B,      1px 1px 0 #B7584B,      0 0 .2em #fff, 0 0 .2em #fff, 0 0 .3em #e60073, 0 0 .4em #e60073, 0 0 .6em #e60073;
+  font-size: 10vw;
+  line-height: 1.2em;
+  text-align: center;
+  position: relative;
+  margin: 0; }
+
+.decor-L {
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/balloonsL.png") no-repeat;
+background-size: contain;
+position: absolute;
+top: 10vh;
+left: 0;
+width: 30vw;
+height: 90vh; }
+
+.decor-R {
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/balloonsR.png") no-repeat;
+background-size: contain;
+position: absolute;
+top: 10vh;
+right: 0;
+width: 30vw;
+height: 90vh; }
+
+.discount {
+z-index: 140;
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/discount.png") no-repeat;
+background-size: contain;
+position: absolute;
+bottom: 35vh;
+right: 5vw;
+width: 16vw;
+height: 16vw; }
+
+.items {
+z-index: 110;
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/items.png") no-repeat center center;
+background-size: contain;
+background-position: center center;
+flex-grow: 2;
+margin-bottom: 2vw; }
+
+.window {
+background: url("https://assets.remerge.io/dpa/Mytona/window.png") no-repeat;
+background-size: 100% 100%;
+width: 84vw;
+height: 40vh;
+margin: 0 auto;
+z-index: 1000;
+display: flex;
+flex-direction: column; }
+
+.character {
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/character3.png") no-repeat bottom left;
+background-size: contain;
+bottom: 0;
+position: absolute;
+width: 50vw;
+height: 50vh;
+z-index: 8000;
+filter: drop-shadow(0vw 0vw 1vw rgba(0, 0, 0, 0.5)); }
+
+.timer {
+z-index: 200;
+background: url("https://assets.remerge.io/dpa/MytonaCD-offers/timer.png") no-repeat;
+background-size: contain;
+background-position: center top;
+position: absolute;
+width: 80vw;
+left: 10vw;
+height: calc(100 * .15vw);
+animation: shake 3.5s ease-in-out infinite both; }
+.timer p {
+  text-align: center;
+  font-family: "merge_probold";
+  color: white;
+  text-shadow: -1px -1px 0 #B7584B,        1px -1px 0 #B7584B,      -1px 1px 0 #B7584B,      1px 1px 0 #B7584B;
+  position: relative;
+  font-size: calc(40 * .15vw);
+  letter-spacing: 0;
+  height: 100%;
+  margin: 0;
+  padding-left: calc(155 * .14vw);
+  padding-top: calc(35 * .14vw);
+  text-align: left;
+  white-space: nowrap; }
+
+.copy {
+margin-top: 16vw;
+text-align: center;
+width: 100%;
+padding-left: 5vw;
+padding-right: 5vw;
+display: flex;
+align-items: center;
+justify-content: center; }
+.copy p {
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 7vw;
+  color: #e2004c;
+  margin: 0; }
+
+.cta {
+z-index: 6;
+background: url("https://assets.remerge.io/dpa/Mytona/cta-en.png") no-repeat;
+background-size: 105%;
+width: 36vw;
+height: 11vw;
+position: absolute;
+top: 86vh;
+left: 50%;
+transform: translateX(-50%);
+background-position: center center;
+animation: pulse 1.5s infinite;
+background-position: center;
+border: 1px;
+border-radius: 3.3vw;
+z-index: 9000; }
+
+@media screen and (min-aspect-ratio: 1 / 1) {
+.window {
+  width: 70%;
+  height: 56vh; }
+.cta {
+  width: 28vw;
+  height: 8vw;
+  border-radius: 2vw; }
+.headline p {
+  font-size: 8vh; }
+.copy p {
+  font-size: 6vh;
+  line-height: 1.15em; }
+.copy.default-copy {
+  margin-top: 8vw; }
+.discount {
+  bottom: 25vh;
+  right: 8vw;
+  width: 16vh; } }
+
+@media screen and (min-aspect-ratio: 3 / 2) {
+.items {
+  height: 20vh;
+  bottom: 18vh; }
+.discount {
+  right: 22vw;
+  bottom: 22vh; }
+.character {
+  height: 65vh; } }
+
+@media screen and (min-aspect-ratio: 5 / 2) {
+.logo {
+  left: 1vw;
+  height: 70vh;
+  transform: none;
+  top: 15vh;
+  width: 18vw;
+  background-position: center left; }
+.headline {
+  height: 30vh;
+  width: 330vh;
+  left: 26vw;
+  bottom: 0vh;
+  animation: text1 3s infinite;
+  position: absolute; }
+  .headline p {
+    font-size: 20vh;
+    text-shadow: -1px -1px 0 #B7584B,        1px -1px 0 #B7584B,      -1px 1px 0 #B7584B,      1px 1px 0 #B7584B; }
+.headline.default-headline {
+  bottom: 25vh; }
+.copy {
+  height: 30vh;
+  width: 330vh;
+  left: 26vw;
+  bottom: 0vh;
+  position: absolute;
+  animation: text2 3s infinite;
+  margin: 0;
+  padding: 0; }
+  .copy p {
+    font-size: 20vh;
+    line-height: 1.2em;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #B7584B,        1px -1px 0 #B7584B,      -1px 1px 0 #B7584B,      1px 1px 0 #B7584B; }
+.copy.default-copy {
+  bottom: 25vh; }
+.window, .items, .decor-L, .decor-R, .flex-wrapper {
+  background: none;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: absoute;
+  top: 0;
+  left: 0; }
+.decor-L, .decor-R {
+  display: none; }
+.timer {
+  top: 5vh;
+  width: 36vw;
+  left: 35vw;
+  height: 49vh; }
+  .timer p {
+    font-size: 20vh;
+    text-align: center;
+    padding: 0;
+    margin-left: 35vh;
+    margin-top: 15vh; }
+.character {
+  bottom: -70vh;
+  left: 18vw;
+  width: 20vw;
+  height: 200vh; }
+.cta {
+  height: 7vw;
+  width: 23vw;
+  top: 35%;
+  right: 1vw;
+  left: inherit;
+  transform: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center center;
+  border-radius: 15vh; } }
+
+</style>
+
+<div class="container">
+<a href="{{ClickUrl.WithParams TargetUrl:TargetUrl}}">
+  <div class="bg"></div>
+  <div class="logo"></div>
+  <div class="flex-wrapper">
+    <div class="headline">
+      <p>Special offer!</p>
+    </div>
+
+    <div class="decor-L"></div>
+    <div class="decor-R"></div>
+    <div class="window">
+      <div class="timer">
+        <p><span id="countdown-text">Ends in </span><span id="countdown-timer">00:00:00</span></p>
+      </div>
+      <div class="copy">
+        <p>Limited time offers for you!</p>
+      </div>
+      <div class="items"></div>
+    </div>
+
+
+  </div>
+  <div class="character"></div>
+
+  <div class="cta"></div>
+</a>
+</div>
+<script>
+var events = [
+  {
+    startsAt: "Jul 04, 2021 00:00:00",
+    endsAt: "Jul 05, 2021 23:59:59",
+    endsInText: "Ends in ",
+    headline: "Independence Day",
+    copy: "Limited time offers for you!",
+    decorL: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/independence-day/independence-balloonsL.png"],
+    decorR: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/independence-day/independence-balloonsR.png"],
+    items: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/independence-day/independence-items.png"]
+  },
+  {
+    startsAt: "Jul 15, 2021 00:00:00",
+    endsAt: "Jul 16, 2021 23:59:59",
+    endsInText: "Ends in ",
+    headline: "French Fry Day",
+    copy: "Limited time offers for you!",
+    decorL: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/ice-cream/icecream-decor-l.png"],
+    decorR: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/ice-cream/icecream-decor-r.png"],
+    items: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/ice-cream/icecream-items.png"],
+    character: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/ice-cream/icecream-character.png"],
+  },
+  {
+    startsAt: "Jul 8, 2021 00:00:00",
+    endsAt: "Jul 9, 2021 23:59:59",
+    endsInText: "Ends in ",
+    headline: "Ice Cream Day",
+    copy: "Limited time offers for you!",
+    decorL: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/french-fries/frenchfries-decor-l.png"],
+    decorR: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/french-fries/frenchfries-decor-r.png"],
+    character: ["https://assets.remerge.io/dpa/MytonaCD-offers/july/french-fries/frenchfries-character.png"],
+  }
+];
+
+var defaultEvent = {
+    startsAt: today,
+    endsAt: today,
+    headline: "Special offer!",
+    copy: "Chef, check your limited time offers!",
+    decorL: ["https://assets.remerge.io/dpa/MytonaCD-offers/balloonsL.png"],
+    decorR: ["https://assets.remerge.io/dpa/MytonaCD-offers/balloonsR.png"],
+    items: ["https://assets.remerge.io/dpa/MytonaCD-offers/items.png"],
+    character: [
+      "https://assets.remerge.io/dpa/MytonaCD-offers/character1.png", 
+      "https://assets.remerge.io/dpa/MytonaCD-offers/character2.png", 
+      "https://assets.remerge.io/dpa/MytonaCD-offers/character3.png",
+      "https://assets.remerge.io/dpa/MytonaCD-offers/character4.png"
+    ],
+  }
+
+var today = Date.now()
+var availableEvent = null;
+var runningEvent = false;
+for (var i = 0; i < events.length; i++) {
+  var event = events[i];
+  var startsAt = new Date(event.startsAt).getTime();
+  var endsAt = new Date(event.endsAt).getTime();
+  if (startsAt <= today && today <= endsAt) {
+    // find availabel event
+    availableEvent = {
+      startsAt: startsAt,
+      endsAt: endsAt,
+      endsInText: event.endsInText,
+      headline: event.headline,
+      copy: event.copy,
+      decorL: event.decorL ? event.decorL : defaultEvent.decorL,
+      decorR: event.decorR ? event.decorR : defaultEvent.decorR,
+      items: event.items ? event.items : defaultEvent.items,
+      character: event.character ? event.character : defaultEvent.character,
+    }
+    runningEvent = true;
+    break
+  }
+
+}
+if (!availableEvent) {
+  // fallback
+  availableEvent = defaultEvent;
+}
+
+
+function timeMessage(distance) {
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var dayText = days > 0 ? days + ' d ' : ""
+  return dayText + + hours + ":" + minutes + ":" + seconds;
+}
+
+var x = setInterval(function () {
+
+  var now = new Date().getTime();
+  var distanceStart = availableEvent.startsAt - now;
+  var distanceEnd = availableEvent.endsAt - now;
+  var timerText = "";
+  var saleText = "";
+  if (distanceStart < 0) {
+    if (distanceEnd < 0) {
+      clearInterval(x);
+    } else {
+      timerText = timeMessage(distanceEnd);
+      saleText = 'Ends in '
+    }
+  } else {
+    timerText = timeMessage(distanceStart);
+    saleText = 'Starts in '
+  }
+  document.querySelector("#countdown-timer").innerHTML = timerText;
+  document.querySelector("#countdown-text").innerHTML = saleText;
+}, 1000);
+document.querySelector(".headline").innerHTML = "<p>" + availableEvent.headline + "</p>";
+document.querySelector(".copy").innerHTML = "<p>" + availableEvent.copy + "</p>";
+if (!runningEvent) {
+  document.querySelector(".timer").style.display = "none";
+  document.querySelector(".copy").classList.add("default-copy");
+  document.querySelector(".headline").classList.add("default-headline");
+}
+
+var getRandomInt = function(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var setUpBg = function(key) {
+  var keyMap = {
+    "decorL": ".decor-L",
+    "decorR": ".decor-R",
+    "items": ".items",
+    "character": ".character"
+  }
+  var urlList = availableEvent[key]
+  var index = getRandomInt(0, urlList.length - 1)
+  console.log(urlList, index);
+  document.querySelector(keyMap[key]).style.backgroundImage = "url('" + urlList[index] + "')";
+
+}
+setUpBg("decorL");
+setUpBg("decorR");
+setUpBg("items");
+setUpBg("character");
+
+</script>
+
+
+{{TrackingPixel}}
+</body>
